@@ -1,0 +1,12 @@
+-- SELECT * FROM users 
+-- SELECT * FROM posts; 
+-- SELECT * FROM comments; 
+-- SELECT * FROM posts WHERE userid=1; 
+-- SELECT * FROM comments WHERE userid=3; 
+-- SELECT users.name, users.email, COUNT(users.id) AS 'Number of Posts' FROM users LEFT JOIN posts ON users.id = posts.userId GROUP BY users.id;
+-- SELECT users.id, users.name, users.email FROM users LEFT JOIN posts ON users.id = posts.userId WHERE posts.userId>0 GROUP BY users.id;
+-- SELECT posts.id, posts.title, posts.content, posts.userId, posts.createdAt, posts.updatedAt FROM posts LEFT JOIN comments ON posts.id =   comments.postId WHERE comments.id>0 GROUP BY posts.id ;
+ -- SELECT posts.id, posts.title, posts.content, posts.userId, posts.createdAt, posts.updatedAt FROM posts LEFT JOIN comments ON posts.id =   comments.postId WHERE comments.postId is null ;
+-- SELECT *  FROM posts ORDER BY createdAt LIMIT 1;
+-- SELECT * FROM comments WHERE comments.content LIKE 'I%'; 
+-- SELECT * FROM comments WHERE postId=1 AND isEdited=0
